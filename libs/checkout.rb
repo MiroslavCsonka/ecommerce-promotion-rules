@@ -17,7 +17,7 @@ class Checkout
   end
 
   def clean_total
-    @products.map(&:price).reduce(0, &:+).round
+    @products.map(&:price).reduce(0, &:+).ceil
   end
 
   def clone
